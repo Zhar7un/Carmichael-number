@@ -24,71 +24,131 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-In this paper we venture beyond the classical understanding of Carmichael numbers, a distinct category of composite numbers within number theory. The study first introduces a construction for the proposed generalization, aiming to provide a comprehensive extension of their traditional concept. Subsequently, we delve into a series of carefully curated examples that effectively demonstrate the proposed generalization's applicability and potential.
+In this paper we venture beyond the classical understanding of Carmichael numbers, a distinct category of composite numbers within 
+number theory. The study first introduces a construction for the proposed generalization, aiming to provide a comprehensive extension 
+of their traditional concept. Subsequently, we delve into a series of carefully curated examples that effectively demonstrate the 
+proposed generalization's applicability and potential.
 \end{abstract}
 
 \section{Introduction}
-In the field of elementary number theory, Fermat’s Little Theorem is recognized as a pivotal result. It stipulates that for every prime number $p$, the equality $$a^p \equiv a \ (\textrm{mod}\ p)$$ holds true for all integers $a$.
+In the field of elementary number theory, Fermat’s Little Theorem is recognized as a pivotal result. It stipulates that for every 
+prime number $p$, the equality $$a^p \equiv a \ (\textrm{mod}\ p)$$ holds true for all integers $a$.
 
-This theorem forms the basis of the rudimentary Fermat Compositeness Test, which postulates that if $a^n \not\equiv a \mod n$ for some integer a, then n is confirmed as composite. Despite the advantage of this test being computationally straightforward, a notable limitation arises when it fails to correctly determine the nature of some composite numbers n 
+This theorem forms the basis of the rudimentary Fermat Compositeness Test, which postulates that if $a^n \not\equiv a \mod n$ for 
+some integer a, then n is confirmed as composite. Despite the advantage of this test being computationally straightforward, a notable 
+limitation arises when it fails to correctly determine the nature of some composite numbers n 
 
-For instance, if $n = 5731$ and $a = 5$, a calculation reveals that $5^{5731} \equiv 5 \ (\textrm{mod}\ 5731)$. However, this inconclusive outcome is remedied by choosing a different integer, such as $a = 6$, which gives $6^{5731} \equiv 1832 \ (\textrm{mod}\ 5731)$, thus
-proving that 5731 is composite 5731 = $11 \cdot 521$. 
+For instance, if $n = 5731$ and $a = 5$, a calculation reveals that $5^{5731} \equiv 5 \ (\textrm{mod}\ 5731)$. However, this 
+inconclusive outcome is remedied by choosing a different integer, such as 
+$a = 6$, which gives $6^{5731} \equiv 1832 \ (\textrm{mod}\ 5731)$, thus proving that 5731 is composite 5731 = $11 \cdot 521$. 
 
-However, the occurrence of such fortuity is not universal. Certain composite numbers $n$ exist that evade the Fermat Compositeness Test regardless of the chosen integer $a.$ This leads us to the introduction of Carmichael numbers, a distinctive subset of composite numbers in number theory, which defy common composite number properties.
+However, the occurrence of such fortuity is not universal. Certain composite numbers $n$ exist that evade the Fermat Compositeness 
+Test regardless of the chosen integer $a.$ This leads us to the introduction of Carmichael numbers, a distinctive subset of composite 
+numbers in number theory, which defy common composite number properties.
 
-In its simplest form, a Carmichael number $n$, is a positive composite integer that satisfies the condition $a^{n-1} = 1\ (\textrm{mod}\ n)$ for all integers a relatively prime to $n.$ This property echoes Fermat's Little Theorem, which is typically associated with prime numbers, thereby underscoring the intriguing nature of Carmichael numbers in the landscape of pseudoprimes.
+In its simplest form, a Carmichael number $n$, is a positive composite integer that satisfies the condition 
+$a^{n-1} = 1\ (\textrm{mod}\ n)$ for all integers a relatively prime to $n.$ This property echoes Fermat's Little Theorem, which is 
+typically associated with prime numbers, thereby underscoring the intriguing nature of Carmichael numbers in the landscape of 
+pseudoprimes.
 
-Additionally, in this work, the so-called Korselt's criterion plays a very crucial role. This criterion specifies the conditions under which a given integer is a Carmichael number. A positive composite integer $n$ is a Carmichael number if and only if $n$ is square-free, and for every prime divisor $p$ of $n$, the condition $p-1 \mid n-1$ holds true. This criterion is important to us because in many generalizations of Carmichael numbers, a similar assertion is encountered in one way or another, as we will soon ascertain.
+Additionally, in this work, the so-called Korselt's criterion plays a very crucial role. This criterion specifies the conditions 
+under which a given integer is a Carmichael number. A positive composite integer $n$ is a Carmichael number if and only if $n$ is 
+square-free, and for every prime divisor $p$ of $n$, the condition $p-1 \mid n-1$ holds true. This criterion is important to us 
+because in many generalizations of Carmichael numbers, a similar assertion is encountered in one way or another, as we will soon 
+ascertain.
 
-In the present study, we aim to extend the boundaries of the classical definition of Carmichael numbers, introducing a generalized version that pushes the confines of our current understanding. Throughout the process of defining the main constructions of the article, we will rely on the existing examples of various generalizations of Carmichael numbers. Our goal will be to create a language in which each of the considered examples can be described uniformly.
+In the present study, we aim to extend the boundaries of the classical definition of Carmichael numbers, introducing a generalized 
+version that pushes the confines of our current understanding. Throughout the process of defining the main constructions of the 
+article, we will rely on the existing examples of various generalizations of Carmichael numbers. Our goal will be to create a 
+language in which each of the considered examples can be described uniformly.
 
 \newpage
 
 
 
 \section {Main Idea}
-In this section, we present the main construction of the paper, based on a continuation of the ideas taken from the classical definition of Carmichael numbers.
+In this section, we present the main construction of the paper, based on a continuation of the ideas taken from the classical 
+definition of Carmichael numbers.
 
-Following the construction behind the Carmichael numbers, we might see that each natural number $n$ is associated with a certain group, namely $(\mathbb{Z}/n\mathbb{Z})^\times$, and some integer $f(n)=n-1$, in such a way that the whole construction satisfies important property:
+Following the construction behind the Carmichael numbers, we might see that each natural number $n$ is associated with a certain 
+group, namely $(\mathbb{Z}/n\mathbb{Z})^\times$, and some integer $f(n)=n-1$, in such a way that the whole construction satisfies 
+important property:
 \begin{center}
     For any prime number $p$ and every choice of element $g \in (\mathbb{Z}/n\mathbb{Z})^\times$ the equality $g^{f(p)}=1$ holds.
 \end{center}
 Subsequently, Carmichael numbers are defined as those which comply with the same condition, yet retain their composite nature.
 
-The pathway towards generalization should be relatively apparent at this point. Specifically, alterations may be made to the corresponding groups and the function $f$. However, certain factors warrant careful consideration in the process. Primarily, the correspondence of groups must be done in a manner that transfers the properties of numbers and their relations, to a significant extent, onto the properties of corresponding groups and their respective relations. Secondly, the function $f$ should not be irregular, it must be logically defined for primes and then naturally extended to composite numbers.
+The pathway towards generalization should be relatively apparent at this point. Specifically, alterations may be made to the 
+corresponding groups and the function $f$. However, certain factors warrant careful consideration in the process. Primarily, 
+the correspondence of groups must be done in a manner that transfers the properties of numbers and their relations, to a significant 
+extent, onto the properties of corresponding groups and their respective relations. Secondly, the function $f$ should not be 
+irregular, it must be logically defined for primes and then naturally extended to composite numbers.
 
-We will start with the choice of the groups. As we mentioned above, the choice must at some extent preserve relations within integers, so the most consistent way to accomplish that is choosing the right type of a functor. The most straightforward one is a functor from posetal category of $\mathbb{Z}$\footnote{Objects are elements of $\mathbb{Z}$ and arrows are divisibility relations.} to $\mathbf{Grp}$, but as we will see in the examples, the better option of domain category is actually $\mathbf{CRing}$, since the constructions from the examples we have considered are naturally defined not only on objects from posetal category of $\mathbb{Z},$ but rather on commutative rings. The category of commutative rings contains, in particular, the family $\mathbb{Z}/n\mathbb{Z}$, thus it encodes some relations of integers. Furthermore, it is initially tempting to postulate that the functor preserves limits. However, we aim to impose more rigorous constraints on the functor, namely we will assume that underlying $\mathbf{CRing} \xrightarrow{} \mathbf{Set}$ functor of $\mathfrak{G}$ is representable. Despite the stringency, these restriction are consistent and validated by the examples. 
+We will start with the choice of the groups. As we mentioned above, the choice must at some extent preserve relations within 
+integers, so the most consistent way to accomplish that is choosing the right type of a functor. The most straightforward one is 
+a functor from posetal category of $\mathbb{Z}$\footnote{Objects are elements of 
+$\mathbb{Z}$ and arrows are divisibility relations.} to $\mathbf{Grp}$, but as we will see in the examples, the better option 
+of domain category is actually $\mathbf{CRing}$, since the constructions from the examples we have considered are naturally 
+defined not only on objects from posetal category of $\mathbb{Z},$ but rather on commutative rings. The category of commutative 
+rings contains, in particular, the family $\mathbb{Z}/n\mathbb{Z}$, thus it encodes some relations of integers. Furthermore, it 
+is initially tempting to postulate that the functor preserves limits. However, we aim to impose more rigorous constraints on 
+the functor, namely we will assume that underlying $\mathbf{CRing} \xrightarrow{} \mathbf{Set}$ functor of $\mathfrak{G}$ is 
+representable. Despite the stringency, these restriction are consistent and validated by the examples. 
 
-The next step is defining the function $f$ in a consistent manner for the selected functor $\mathfrak{G}$ in such a way, that it will provide the analogue of Fermat primality test.
+The next step is defining the function $f$ in a consistent manner for the selected functor $\mathfrak{G}$ in such a way, that 
+it will provide the analogue of Fermat primality test.
 After that we should naturally define $f$ over all integers.
 
 \section{Formal definitions}
 
 \begin{definition}
-    Let $\mathbf{C}$ be a locally small category. A functor $\mathfrak{F}:\mathbf{C}\xrightarrow{}\mathbf{Set}$ is said to be representable if there is some object $A$ of $\mathbf{C}$ such that the functor $\mathfrak{F}$ is naturally isomorphic to the hom-functor $\mathbf{h}^A = \mathbf{Hom(}A\mathbf{, -)}$.
+    Let $\mathbf{C}$ be a locally small category. A functor $\mathfrak{F}:\mathbf{C}\xrightarrow{}\mathbf{Set}$ is said to be 
+    representable if there is some object $A$ of $\mathbf{C}$ such that the functor $\mathfrak{F}$ is naturally isomorphic to 
+    the hom-functor $\mathbf{h}^A = \mathbf{Hom(}A\mathbf{, -)}$.
 \end{definition}
 
-In particular, the functor $\mathbf{G}(R)=R^\times$ which participates in the definition of the classical Carmichael numbers is representable. The ring of Laurent polynomials $\mathbb{Z}[T, T^{-1}]$ together with natural isomorphism $\xi:\mathbf{h^A} \xrightarrow{} \mathfrak{G},\ \xi_R(f)=f(T)$ is a representation of $\mathfrak{G}$.
+In particular, the functor $\mathbf{G}(R)=R^\times$ which participates in the definition of the classical Carmichael numbers 
+is representable. The ring of Laurent polynomials $\mathbb{Z}[T, T^{-1}]$ together with natural isomorphism 
+$\xi:\mathbf{h^A} \xrightarrow{} \mathfrak{G},\ \xi_R(f)=f(T)$ is a representation of $\mathfrak{G}$.
 
 \begin{theorem}
-The functor $\mathfrak{F}:\mathbf{CRing}\xrightarrow{}\mathbf{Set}$ is representable iff there exists a system $X$ of polynomial equations over $\mathbb{Z}$ with a variables $\{T_i\}_{i\in I}$ such that the functor $\mathfrak{V}_X : \mathbf{CRing} \xrightarrow{} \mathbf{Set}$ defined by $\mathfrak{V}_X(R) = \{(r_i)_{i\in I} \ | \ r_i \in R, \ (r_i)_{i\in I} \in \mathbf{Sol}_R(X)\}$ is naturally isomorphic to $\mathfrak{F}$.
+The functor $\mathfrak{F}:\mathbf{CRing}\xrightarrow{}\mathbf{Set}$ is representable iff there exists a system $X$ of polynomial 
+equations over $\mathbb{Z}$ with a variables $\{T_i\}_{i\in I}$ such that the functor 
+$\mathfrak{V}_X : \mathbf{CRing} \xrightarrow{} \mathbf{Set}$ defined by $\mathfrak{V}_X(R) = 
+\{(r_i)_{i\in I} \ | \ r_i \in R, \ (r_i)_{i\in I} \in \mathbf{Sol}_R(X)\}$ is naturally isomorphic to $\mathfrak{F}$.
 \end{theorem}
 
 \begin{proof}
-Consider the ideal $\mathfrak{a}$ in $\mathbb{Z}[T_i]_{i \in I}$, generated by all the equations from the system $X$. We are going to show, that there exists a natural isomorphism $\mu$ from $\mathfrak{V}_X$ to $\mathbf{Hom}(\mathbb{Z}[T_i]_{i \in I}/\mathfrak{a}, -) $.\\
-Indeed, let $R$ be a commutative ring and $(r_i)_{i\in I} \in \mathbf{Sol}_R(X)$, then there exists a homeomorphism $\mathbb{Z}[T_i]_{i\in I}\xrightarrow{\varphi} R$, which maps $T_i$ to $r_i$ for all $i \in I$. At this point it is clear to see, that $\operatorname{ker} \varphi \supset \mathbf{Sol}_R(X)$, this allows $\varphi$ to be factored throught $\mathbb{Z}[T_i]_{i\in I}/\mathfrak{a} \xrightarrow{} R$ and gives us homomorphism $\varphi '\in \mathbf{Hom}(\mathbb{Z}[T_i]_{i \in I}/\mathfrak{a}, R)$. So function $\mu_R$ maps $(r_i)_{i\in I}$ to $\varphi '$.\\
-Conversely, suppose there is given a homomorphism $\varphi ': \mathbb{Z}[T_i]_{i\in I}/\mathfrak{a}\xrightarrow{} R$. It uniquely determines a composite homomorphism $\varphi : \mathbb{Z}[T_i]_{i\in I}\xrightarrow{}\mathbb{Z}[T_i]_{i\in I}/\mathfrak{a}\xrightarrow{} R$ which sends $T_i$ to $r_i$ and $(r_i)_{i\in I} \in\mathbf{Sol}_R(X),$ because it filtrates through the $\varphi '$ and $  \mathbf{Sol}_R(X) \subset \operatorname{ker} \varphi '$.\\
-It is easy to verify that the constructed mappings are mutually inverse, which proves that $\mathfrak{V}_X$ and $\mathbf{Hom}(\mathbb{Z}[T_i]_{i \in I}/\mathfrak{a}, -) $ are naturally isomorphic and thus $\mathfrak{V}_X$ is representable.\\
-From the other side, let $\mathbf{A}$ be the commutative ring, that represents $\mathfrak{F}.$ Then, there exists free ring $\mathbb{Z}[T_i]_{i \in I}$ and surjective homomorphism $\phi:\mathbb{Z}[T_i]_{i \in I}\twoheadrightarrow \mathbf{A}$. So we may conclude, that $\mathbf{A}$ is isomorphic to $\mathbb{Z}[T_i]_{i \in I}/\mathfrak{a}$, where $\mathfrak{a}=\operatorname{ker}\phi$. Clearly, from the ring $\mathbb{Z}[T_i]_{i\in I}$ and the ideal $\mathfrak{a}$ it is easy to reconstruct the system of equations $X$, and consequently, the functor $\mathfrak{V}_X.$
+Consider the ideal $\mathfrak{a}$ in $\mathbb{Z}[T_i]_{i \in I}$, generated by all the equations from the system $X$. We are 
+going to show, that there exists a natural isomorphism 
+$\mu$ from $\mathfrak{V}_X$ to $\mathbf{Hom}(\mathbb{Z}[T_i]_{i \in I}/\mathfrak{a}, -) $.\\
+Indeed, let $R$ be a commutative ring and $(r_i)_{i\in I} \in \mathbf{Sol}_R(X)$, then there exists a homeomorphism 
+$\mathbb{Z}[T_i]_{i\in I}\xrightarrow{\varphi} R$, which maps $T_i$ to $r_i$ for all $i \in I$. At this point it is clear to see, 
+that $\operatorname{ker} \varphi \supset \mathbf{Sol}_R(X)$, this allows $\varphi$ to be factored throught 
+$\mathbb{Z}[T_i]_{i\in I}/\mathfrak{a} \xrightarrow{} R$ and gives us homomorphism 
+$\varphi '\in \mathbf{Hom}(\mathbb{Z}[T_i]_{i \in I}/\mathfrak{a}, R)$. So function $\mu_R$ maps $(r_i)_{i\in I}$ to $\varphi '$.\\
+Conversely, suppose there is given a homomorphism $\varphi ': \mathbb{Z}[T_i]_{i\in I}/\mathfrak{a}\xrightarrow{} R$. 
+It uniquely determines a composite homomorphism
+ $\varphi : \mathbb{Z}[T_i]_{i\in I}\xrightarrow{}\mathbb{Z}[T_i]_{i\in I}/\mathfrak{a}\xrightarrow{} R$ which sends 
+ $T_i$ to $r_i$ and $(r_i)_{i\in I} \in\mathbf{Sol}_R(X),$ because it filtrates through the $\varphi '$ and 
+ $  \mathbf{Sol}_R(X) \subset \operatorname{ker} \varphi '$.\\
+It is easy to verify that the constructed mappings are mutually inverse, which proves that $\mathfrak{V}_X$ and 
+$\mathbf{Hom}(\mathbb{Z}[T_i]_{i \in I}/\mathfrak{a}, -) $ are naturally isomorphic and thus $\mathfrak{V}_X$ is representable.\\
+From the other side, let $\mathbf{A}$ be the commutative ring, that represents $\mathfrak{F}.$ Then, there exists free ring 
+$\mathbb{Z}[T_i]_{i \in I}$ and surjective homomorphism $\phi:\mathbb{Z}[T_i]_{i \in I}\twoheadrightarrow \mathbf{A}$.
+ So we may conclude, that $\mathbf{A}$ is isomorphic to $\mathbb{Z}[T_i]_{i \in I}/\mathfrak{a}$, where 
+ $\mathfrak{a}=\operatorname{ker}\phi$. Clearly, from the ring $\mathbb{Z}[T_i]_{i\in I}$ and the ideal $\mathfrak{a}$ it is easy
+  to reconstruct the system of equations $X$, and consequently, the functor $\mathfrak{V}_X.$
 \end{proof}
 
 \begin{definition}
-    A functor $\mathfrak{G}:\mathbf{CRing}\xrightarrow{}\mathbf{Grp}$ such that the underlying set-valued functor is presentable is called \textit{affine group over} $\mathbb{Z}$.
+    A functor $\mathfrak{G}:\mathbf{CRing}\xrightarrow{}\mathbf{Grp}$ such that the underlying set-valued functor is presentable 
+    is called \textit{affine group over} $\mathbb{Z}$.
     Let $\mathfrak{G}_n$ denote $\mathfrak{G}(\mathbb{Z}/n\mathbb{Z})$.
 \end{definition}
 
-We can also consider affine groups as group objects in the category of representable functors \newline $\mathbf{CRing}\xrightarrow{}\mathbf{Set}$.
+We can also consider affine groups as group objects in the category of representable functors 
+\newline $\mathbf{CRing}\xrightarrow{}\mathbf{Set}$.
 
 
 
@@ -97,15 +157,18 @@ We can also consider affine groups as group objects in the category of represent
     $$\forall a \in \mathfrak{G}_p : a^{f(p)} = 1.$$
     is satisfied.
 \end{definition}
-One approach to constructing the function $f$ is as follows: for each group $\mathfrak{G}_p$, we find its exponent, and thereafter, it usually becomes clear how exactly the function $f$ should be defined for all positive integers.
+One approach to constructing the function $f$ is as follows: for each group $\mathfrak{G}_p$, we find its exponent, and thereafter,
+ it usually becomes clear how exactly the function $f$ should be defined for all positive integers.
 
 Now we may advance to the definition of the Carmichael numbers of this particular construction.
 
 \begin{definition} Let $\mathfrak{G}$ be an affine 
-group over $\mathbb{Z}$ and let $f$ be a Fermat-suitable function. Then, ($\mathfrak{G}$,$f$)-\textit{Carmichael number} is a positive composite integer n that satisfies the condition: $$\forall a \in \mathfrak{G}_n : a^{f(n)} = 1.$$ 
+group over $\mathbb{Z}$ and let $f$ be a Fermat-suitable function. Then, ($\mathfrak{G}$,$f$)-\textit{Carmichael number}
+ is a positive composite integer n that satisfies the condition: $$\forall a \in \mathfrak{G}_n : a^{f(n)} = 1.$$ 
 \end{definition}
 
-Upon establishing the construction, it becomes compelling to investigate the inherent properties of the $(\mathfrak{G}, f)$-Carmichael numbers.
+Upon establishing the construction, it becomes compelling to investigate the inherent properties of the 
+$(\mathfrak{G}, f)$-Carmichael numbers.
 
 \newpage
 \section{Examples}
@@ -134,14 +197,16 @@ In this section we will look at some examples of affine groups.
     \hspace*{5cm}
     \begin{enumerate}  
          \item $\implies: x \in R[i]^{\times},\ N - homomorphism \implies N(x^{-1}) = N(x)^{-1} \implies N(x)  \in R^{\times}.$
-        \item $\impliedby:N(x) \in R^{\times} \iff x\overline{x} \in R^{\times} \implies N(x)^{-1}x\overline{x} = 1 \iff (N(x)^{-1}\overline{x})x = 1\implies x \in R[i]^{\times}$.
+        \item $\impliedby:N(x) \in R^{\times} \iff x\overline{x} \in R^{\times} \implies N(x)^{-1}x\overline{x} = 
+        1 \iff (N(x)^{-1}\overline{x})x = 1\implies x \in R[i]^{\times}$.
     \end{enumerate}
     \end{proof}
 
 
 
 Now we can easily see that the pair $(A, \xi)$ such that 
-$A = \dfrac{\mathbb{Z}[T_1, T_2, T_3]}{\langle T_1^2T_3+T_2^2T_3-1\rangle}$ and $\xi_R(f)=f(T_1)+f(T_2)i$ is a representation of the functor.
+$A = \dfrac{\mathbb{Z}[T_1, T_2, T_3]}{\langle T_1^2T_3+T_2^2T_3-1\rangle}$ and $\xi_R(f)=f(T_1)+f(T_2)i$ is a representation 
+of the functor.
 
 In this case $\operatorname{exp}(\mathfrak{G}_p) = \begin{cases} 
     2 & \text{if } p = 2 \\
@@ -170,9 +235,11 @@ $$\begin{aligned}
 Now we will describe the invertible elements in $R[\omega].$
 
     Let $x \in R[\omega]$ then $x = a + b\omega$ and $a, b \in R$.\\
-    Consider the monoid homomorphism $R[\omega]^*  \xrightarrow{\ N\ } R^*$, that is given by the formula $N(a+b\omega) = \\ = a^2 + b^2 - ab.$
+    Consider the monoid homomorphism $R[\omega]^*  \xrightarrow{\ N\ } R^*$, that is given by the formula $N(a+b\omega) = 
+    \\ = a^2 + b^2 - ab.$
     Let's check that N is homomorphism.
-    By definition, put $\overline{x} =  a + b(-1 - \omega) = a + b\omega^2 $. It is easy to check that $N(x) = x\overline{x}$ hence, $N(xy) = 
+    By definition, put $\overline{x} =  a + b(-1 - \omega) = a + b\omega^2 $. It is easy to check that $N(x) = 
+    x\overline{x}$ hence, $N(xy) = 
     xy\overline{xy}$.
     We get that $N$ is a homomorphism iff $\overline{xy} = \overline{x}\cdot\overline{y}.$
     Last equality can be proved trivially.
@@ -185,17 +252,20 @@ Now we will describe the invertible elements in $R[\omega].$
     \begin{proof}
     \hspace*{5cm}
     \begin{enumerate}
-        \item $\implies: x \in R[\omega]^{\times},\ N - homomorphism \implies N(x^{-1}) = N(x)^{-1} \implies N(x)  \in R^{\times}.$
-        \item $\impliedby:N(x) \in R^{\times} \iff x\overline{x} \in R^{\times} \implies N(x)^{-1}x\overline{x} = 1 \iff (N(x)^{-1}\overline{x})x = 1 \implies x \in R[\omega]^{\times}$.
+        \item $\implies: x \in R[\omega]^{\times},\ N - homomorphism \implies N(x^{-1}) = N(x)^{-1} \implies N(x)  
+        \in R^{\times}.$
+        \item $\impliedby:N(x) \in R^{\times} \iff x\overline{x} \in R^{\times} \implies N(x)^{-1}x\overline{x} = 1 
+        \iff (N(x)^{-1}\overline{x})x = 1 \implies x \in R[\omega]^{\times}$.
     \end{enumerate}
     \end{proof}
 
-In this example the representation of the functor is $A = \dfrac{\mathbb{Z}[T_1, T_2, T_3]}{\langle T_1^2T_3+T_2^2T_3-T_1T_2T_3-1\rangle}$ and $\xi_R(f)=f(T_1)+f(T_2)\omega$.
+In this example the representation of the functor is $A = \dfrac{\mathbb{Z}[T_1, T_2, T_3]}{\langle 
+    T_1^2T_3+T_2^2T_3-T_1T_2T_3-1\rangle}$ and $\xi_R(f)=f(T_1)+f(T_2)\omega$.
 
 In this case $\operatorname{exp}(\mathfrak{G}_p) = \begin{cases} 
     6 & \text{if } p = 3\\
-    p^2 - 1 & \text{if } p \equiv 1 \pmod{3}\\
-    (p - 1)^2 & \text{if } p \equiv 2 \pmod{3}
+    p - 1 & \text{if } p \equiv 1 \pmod{3}\\
+    p^2 - 1 & \text{if } p \equiv 2 \pmod{3}
 \end{cases}.$
 
 Then $f$ can be naturally extended to positive integers as follows: $f(n) = 3(n^2 - 1)(n - 1)$.
@@ -212,17 +282,20 @@ Then $f$ can be naturally extended to positive integers as follows: $f(n) = 3(n^
 \begin{proof}
 \hspace*{5cm}
 \begin{enumerate}
-    \item $\implies: x = a + b\epsilon \in R[\epsilon]^{\times} \implies \exists x^{-1} = c + d\epsilon \implies (a+b\epsilon)(c +d\epsilon) = ac + (dc+ ad)\epsilon = 1 \implies\\
+    \item $\implies: x = a + b\epsilon \in R[\epsilon]^{\times} \implies \exists x^{-1} = c + d\epsilon \implies 
+    (a+b\epsilon)(c +d\epsilon) = ac + (dc+ ad)\epsilon = 1 \implies\\
     ac = 1\implies a \in R^{\times}$.
-    \item  $\impliedby: a \in R^{\times}, b \in R, x = a + b\epsilon \implies x^{-1} = a^{-1}(1 + a^{-1}b\epsilon) \implies x  \in R[\epsilon]^{\times}.$
+    \item  $\impliedby: a \in R^{\times}, b \in R, x = a + b\epsilon \implies x^{-1} = a^{-1}(1 + a^{-1}b\epsilon) 
+    \implies x  \in R[\epsilon]^{\times}.$
 \end{enumerate}
 \end{proof}
 
-The representation of the functor is $A = \dfrac{\mathbb{Z}[T_1, T_2, T_3]}{\langle T_1T_3-1\rangle}$ and $\xi_R(f)=f(T_1)+f(T_2)\epsilon$.
+The representation of the functor is $A = \dfrac{\mathbb{Z}[T_1, T_2, T_3]}{\langle T_1T_3-1\rangle}$ and 
+$\xi_R(f)=f(T_1)+f(T_2)\epsilon$.
 
-In this case $\operatorname{exp}(\mathfrak{G}_p) = p - 1.$
+In this case $\operatorname{exp}(\mathfrak{G}_p) = p(p - 1).$
 
-Then $f$ can be naturally extended to positive integers as follows: $f(n) = n - 1$.\\
+Then $f$ can be naturally extended to positive integers as follows: $f(n) = n(n - 1)$.\\
 \end{example}
 
 In the most comprehensive generality, examples employing polynomials can be articulated as follows.
@@ -233,7 +306,9 @@ In the most comprehensive generality, examples employing polynomials can be arti
 Now we shall proceed to the subsequent series of examples related to rings of polynomials.
     
 \begin{example}
-The functor $\mathfrak {G} = \mathbb{GL}_{k}$ is representable for every natural $k.$ We can check that the representation is $A = \dfrac{\mathbb{Z}[T_1, ..., T_{k^2+1}]}{\langle Det(T_1, ... T_{k^2})T_{k^2+1}-1 \rangle}$\footnote{$Det(T_1, ..., T_{k^2})$ denotes $Det\begin{pmatrix}
+The functor $\mathfrak {G} = \mathbb{GL}_{k}$ is representable for every natural $k.$ We can check that the representation is 
+$A = \dfrac{\mathbb{Z}[T_1, ..., T_{k^2+1}]}{\langle Det(T_1, ... T_{k^2})T_{k^2+1}-1 \rangle}$\footnote{$Det(T_1, ..., T_{k^2})$ 
+denotes $Det\begin{pmatrix}
   T_1 & \cdots & T_k\\
   \vdots & \ddots &  \vdots\\
   T_{k^2-k+1} & \cdots & T_{k^2} 
@@ -245,7 +320,8 @@ The functor $\mathfrak {G} = \mathbb{GL}_{k}$ is representable for every natural
 
 This affine group, along with the corresponding series of Carmichael numbers, was examined in \cite{1}.\\
 
-In this case $\operatorname{exp}(\mathfrak{G_p}) = p^{\lceil\log _p k\rceil} \prod_{m=1}^k \Phi_m(p)$, where $\Phi_m(p)$ is a $m$th cyclotomic polynomial.\\
+In this case $\operatorname{exp}(\mathfrak{G_p}) = p^{\lceil\log _p k\rceil} \prod_{m=1}^k \Phi_m(p)$, 
+where $\Phi_m(p)$ is a $m$th cyclotomic polynomial.\\
 
 Then $f$ can be naturally extended to positive integers as follows: $f(n) = n^{\lceil\log _n k\rceil} \prod_{m=1}^k \Phi_m(n)$.\\
 \end{example}
@@ -274,21 +350,24 @@ $\left(\begin{matrix}
     \end{matrix}\right)^{n} = \left(\begin{matrix}
     a^n & 0\\
     0 & 1
-    \end{matrix}\right)$, where $\operatorname{ord}(a) = p-1$. It shows, that $h_1^n = 1$ only if $p-1 \mid \operatorname{exp}(\mathfrak{H_p})$.
+    \end{matrix}\right)$, where $\operatorname{ord}(a) = p-1$. It shows, that $h_1^n = 1$ only if 
+    $p-1 \mid \operatorname{exp}(\mathfrak{H_p})$.
     The next element $h_2^n = \left(\begin{matrix}
     1 & 1\\
     0 & 1
     \end{matrix}\right)^{n} = \left(\begin{matrix}
     1 & n\\
     0 & 1
-    \end{matrix}\right),\ h_2^n = 1$ only if $p \mid \operatorname{exp}(\mathfrak{H}_p).$ In respect that $\operatorname{gcd}(p, p-1)=1$ and $\left|\mathfrak{H}_p\right| = p(p - 1)$ we get $\operatorname{exp}(\mathfrak{H}_p)=p(p-1).$
+    \end{matrix}\right),\ h_2^n = 1$ only if $p \mid \operatorname{exp}(\mathfrak{H}_p).$ In respect that 
+    $\operatorname{gcd}(p, p-1)=1$ and $\left|\mathfrak{H}_p\right| = p(p - 1)$ we get $\operatorname{exp}(\mathfrak{H}_p)=p(p-1).$
 
 So the function $f$ can be naturally extended to positive integers as follows: $f(n) = n(n - 1)$.
 
 \end{example}
 
 \begin{remark}
-    Note also that for any ring $R$ the group $\mathfrak{H}(R)$ is a subgroup of $\mathfrak{G}(R)$ (for $k=2$) in a natural way. It means that there exists a morphism of affine groups $i:\mathfrak{H} \xrightarrow{} \mathfrak{G}$.
+    Note also that for any ring $R$ the group $\mathfrak{H}(R)$ is a subgroup of $\mathfrak{G}(R)$ (for $k=2$) in a natural way. 
+    It means that there exists a morphism of affine groups $i:\mathfrak{H} \xrightarrow{} \mathfrak{G}$.
     Evidently, the diagram below is commutative for any $R,N \in \mathbf{CRing}$ and any homomorphism $f:R \xrightarrow{} N$. 
 \begin{center}
 \begin{tikzcd}
@@ -296,17 +375,32 @@ So the function $f$ can be naturally extended to positive integers as follows: $
 \mathfrak{G}(R) \arrow[r, "{\mathfrak{G}[f]}"] & \mathfrak{G}(N)
 \end{tikzcd}
 \end{center}
-Since all $i_R$ are injective, we should conclude, that for all primes $p\operatorname{exp}(\mathfrak{H}_p) \mid \operatorname{exp}(\mathfrak{G}_p)$ and a quick calculation confirms that: $p(p-1) \mid p(p^2-1).$
+Since all $i_R$ are injective, we should conclude, that for all primes 
+$p\operatorname{exp}(\mathfrak{H}_p) \mid \operatorname{exp}(\mathfrak{G}_p)$ and a quick calculation confirms that: 
+$p(p-1) \mid p(p^2-1).$
 \end{remark}
 
 
 \section{Conclusion}
 
-In conclusion, we would like to note that at this stage, the construction we propose is overly flexible and requires much more work than we initially anticipated. Some aspects of it also need to be reconsidered. For example, we could shift from considering positive integers to the consideration of ideals, which may pave the way for studying so-called Carmichael ideals in an arbitrary commutative ring. With such a transition, the category $\mathbf{CRing}$ (of commutative
-$\mathbb{Z}$-algebras / commutative rings) is replaced by the category $R$\makebox[0.5em][c]{-}$\mathbf{CAlg}$ (of commutative $R$-algebras), thus considering affine groups over $R.$ The greatest difficulties, however, will arise in the attempt to find an analogue of the object for the Fermat-suitable function $f$. Most likely, such a transition will require a complete revision of the constructions associated with the function 
+In conclusion, we would like to note that at this stage, the construction we propose is overly flexible and requires much more work 
+than we initially anticipated. Some aspects of it also need to be reconsidered. For example, we could shift from considering positive 
+integers to the consideration of ideals, which may pave the way for studying so-called Carmichael ideals in an arbitrary commutative 
+ring. With such a transition, the category $\mathbf{CRing}$ (of commutative
+$\mathbb{Z}$-algebras / commutative rings) is replaced by the category $R$\makebox[0.5em][c]{-}$\mathbf{CAlg}$ (of commutative 
+$R$-algebras), thus considering affine groups over $R.$ The greatest difficulties, however, will arise in the attempt to find an 
+analogue of the object for the Fermat-suitable function $f$. Most likely, such a transition will require a complete revision of 
+the constructions associated with the function 
 $f$.\\
-Additionally, it should be noted that affine groups are closely related to affine schemes. This, hypothetically, could introduce geometric imagery and tools into the problem being considered, and may also suggest new possibilities for defining a construction to replace the one with $f$.\\\\
-In closing, this work has laid a foundation for the advanced understanding of Carmichael numbers. Through an generalization approach and analysis of examples, we have sought to broaden the conceptual framework around these intriguing mathematical entities. While the study of Carmichael numbers themselves is an endeavor for future research, the groundwork established in this paper serves as a significant stepping stone towards that goal. We trust that this foundational work will inspire further studies and lively discussions within the mathematical community, advancing our collective comprehension of these fascinating constructs.
+Additionally, it should be noted that affine groups are closely related to affine schemes. This, hypothetically, 
+could introduce geometric imagery and tools into the problem being considered, and may also suggest new possibilities 
+for defining a construction to replace the one with $f$.\\\\
+In closing, this work has laid a foundation for the advanced understanding of Carmichael numbers. Through an generalization 
+approach and analysis of examples, we have sought to broaden the conceptual framework around these intriguing mathematical 
+entities. While the study of Carmichael numbers themselves is an endeavor for future research, the groundwork established 
+in this paper serves as a significant stepping stone towards that goal. We trust that this foundational work will inspire 
+further studies and lively discussions within the mathematical community, advancing our collective comprehension of these 
+fascinating constructs.
 
 \newpage
 
