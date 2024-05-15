@@ -214,7 +214,12 @@ In this case $\operatorname{exp}(\mathfrak{G}_p) = \begin{cases}
     p^2 - 1 & \text{if } p \equiv 3 \pmod{4}
 \end{cases}$
 
-Then $f$ can be naturally extended to positive integers as follows: $f(n) = 2(n^2 - 1)$.
+Then $f$ can be naturally extended to positive integers as follows: $f(n) = 
+\begin{cases}
+    n - 1 & \text{if } n \equiv 1 \pmod{4}\\
+    n^2 - 1 & \text{if } n \equiv 3 \pmod{4}
+\end{cases}
+$.
 
 Using brute force algorithm we found the first 10 ($\mathfrak{G}$,$f$)-\textit{Carmichael numbers}:
 
